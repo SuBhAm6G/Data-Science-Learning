@@ -31,7 +31,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 # Plot the surface
 # This shows the "Mountain" shape mentioned in the intuition section
-ax.plot_surface(x, y, mvn.pdf(pos), cmap='viridis', linewidth=0.2)
+ax.plot_surface(x, y, mvn.pdf(pos), cmap='viridis', linewidth=0.2) #(more likely scores) will be yellow/green, and lower points (unlikely scores) will be blue/purple.
 
 ax.set_xlabel('Math Score')
 ax.set_ylabel('Physics Score')
