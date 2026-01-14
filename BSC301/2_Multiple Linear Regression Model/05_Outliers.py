@@ -24,7 +24,17 @@ model=sm.OLS(df['Score'],X).fit()
 
 # --- 4. Box Plot ---
 df2=pd.DataFrame({
-    "values":[10,11,12,12,13,15,25,37,40, 90,100]
+    "values":[10,11,12,12,13,15,25,37,38,70,80]
 })
-plt.boxplot(df2['values'])
+plt.boxplot(
+    df2['values'],
+    patch_artist=True,
+    boxprops=dict(facecolor='lightblue', color='blue'),
+    medianprops=dict(color='red', linewidth=2),
+    whiskerprops=dict(color='green'),
+    capprops=dict(color='green'),
+    flierprops=dict(marker='o', markerfacecolor='orange', markersize=6)
+)
+
+plt.title("Boxplot of Values")
 plt.show()
